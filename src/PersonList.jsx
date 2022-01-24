@@ -1,7 +1,9 @@
-export default function PersonList() {
+export default function PersonList({ people = [] }) {
   return (
-    <>
-      <h1>List</h1>
-    </>
+    <ul>
+      {people.map((person, index) => (
+        <li key={index}>{person.firstName}</li>
+      ))}
+    </ul>
   );
 }
