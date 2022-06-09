@@ -27,7 +27,7 @@ test("checkbox disabled button after one click and enables on second click", () 
   render(<App />);
   //when checkbox is checked button should be disabled
   const colorButton = screen.getByRole("button", { name: "Change to blue" });
-  const checkbox = screen.getByRole("checkbox");
+  const checkbox = screen.getByRole("checkbox", { name: "Disable button" });
 
   fireEvent.click(checkbox);
   expect(colorButton).toBeDisabled();
